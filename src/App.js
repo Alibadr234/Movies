@@ -1,5 +1,5 @@
 import React from 'react'
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, createHashRouter, RouterProvider } from "react-router-dom";
 import Layout from './Component/Layout/Layout';
 import Home from './Component/Home/Home';
 
@@ -11,7 +11,7 @@ import ActorDetails from './Component/ActorDetails/ActorDetails';
 import Movielist from './Component/Tvlist/Tvlist';
 
 export default function App() {
-  const routers = createBrowserRouter([
+  const routers = createHashRouter([
     {path:'',element:<Layout/>,children:[
       {path:'home',element:<Home/>},
       {path:'',element:<Home/>},
